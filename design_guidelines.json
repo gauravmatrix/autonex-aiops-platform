@@ -1,0 +1,169 @@
+{
+  "design_system": {
+    "identity": {
+      "name": "AUTONEX",
+      "archetype": "Electric Swiss",
+      "tone": "Futuristic, Intelligent, Precision, Trustworthy",
+      "core_values": [
+        "Fusion over Imitation",
+        "Emotion First",
+        "Content is King",
+        "Zoom In",
+        "Negative Space",
+        "Contrast"
+      ]
+    },
+    "typography": {
+      "font_family": {
+        "headings": "Chivo, sans-serif",
+        "body": "IBM Plex Sans, sans-serif",
+        "mono": "JetBrains Mono, monospace"
+      },
+      "scale": {
+        "h1": "text-4xl md:text-5xl font-black tracking-tight leading-none",
+        "h2": "text-3xl md:text-4xl font-bold tracking-tight",
+        "h3": "text-2xl font-bold tracking-tight",
+        "body_large": "text-lg leading-relaxed",
+        "body_base": "text-base leading-relaxed",
+        "caption": "text-xs font-mono tracking-wider uppercase text-muted-foreground"
+      },
+      "rules": [
+        "Use Chivo for all headings (h1-h3).",
+        "Use IBM Plex Sans for all body text.",
+        "Use JetBrains Mono for data values, logs, and code snippets.",
+        "Headings > 32px must use tracking-tight.",
+        "Overlines/Labels must be uppercase + tracking-widest."
+      ]
+    },
+    "colors": {
+      "theme": "dark",
+      "palette": {
+        "background": "#050505",
+        "foreground": "#F8FAFC",
+        "card": "rgba(10, 10, 11, 0.6)",
+        "card_foreground": "#F8FAFC",
+        "primary": "#3B82F6",
+        "primary_foreground": "#FFFFFF",
+        "secondary": "#1E293B",
+        "secondary_foreground": "#F8FAFC",
+        "accent": "#8B5CF6",
+        "accent_foreground": "#FFFFFF",
+        "destructive": "#EF4444",
+        "destructive_foreground": "#FFFFFF",
+        "border": "rgba(255, 255, 255, 0.1)",
+        "input": "rgba(255, 255, 255, 0.05)",
+        "ring": "#3B82F6"
+      },
+      "gradients": {
+        "hero_glow": "radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.15) 0%, transparent 50%)",
+        "active_border": "linear-gradient(90deg, transparent, #3B82F6, transparent)"
+      },
+      "rules": [
+        "Never use pure black (#000000) for backgrounds, use #050505.",
+        "Use 'Electric Blue' (#3B82F6) for primary actions and active states.",
+        "Use 'Neon Purple' (#8B5CF6) for AI-related elements (predictions, insights).",
+        "Use 'Signal Red' (#EF4444) ONLY for critical alerts/failures.",
+        "Glassmorphism backgrounds must use backdrop-blur-xl and a 1px white/10 border."
+      ]
+    },
+    "layout": {
+      "grid_system": "Bento Grid Mode B (High Density)",
+      "spacing": {
+        "container_padding": "p-6 md:p-8 lg:p-12",
+        "item_gap": "gap-4 md:gap-6",
+        "internal_padding": "p-6"
+      },
+      "border_radius": {
+        "default": "rounded-lg",
+        "card": "rounded-xl",
+        "button": "rounded-md"
+      },
+      "rules": [
+        "Dashboard grid: grid-cols-1 md:grid-cols-3 lg:grid-cols-4.",
+        "Every pixel must be utilized. Use h-full on children.",
+        "Use 'Tracing Beam' borders for active/critical cards.",
+        "Mobile-first: Always start with grid-cols-1."
+      ]
+    },
+    "components": {
+      "buttons": {
+        "primary": "bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-300",
+        "secondary": "bg-secondary text-secondary-foreground hover:bg-secondary/80 border border-white/5",
+        "ghost": "hover:bg-white/5 hover:text-white"
+      },
+      "cards": {
+        "glass": "bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl",
+        "solid": "bg-[#0A0A0B] border border-white/5"
+      },
+      "inputs": {
+        "default": "bg-white/5 border-white/10 focus:border-primary/50 focus:ring-primary/20 transition-all"
+      },
+      "visual_enhancers": [
+        "Tracing Beam: Animated gradient border for high-priority cards.",
+        "Glassmorphism: Used for sticky headers and overlays.",
+        "Grid Borders: Subtle border-r and border-b for data tables.",
+        "Scanlines: Optional subtle overlay for 'Terminal' sections."
+      ]
+    },
+    "motion": {
+      "library": "framer-motion",
+      "transitions": {
+        "default": "transition-all duration-300 ease-out",
+        "hover": "scale-[1.02] shadow-lg"
+      },
+      "animations": [
+        "Fade In: initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}",
+        "Stagger Children: transition={{ staggerChildren: 0.1 }}",
+        "Pulse: animate={{ opacity: [0.5, 1, 0.5] }} for live indicators"
+      ]
+    },
+    "assets": {
+      "images": {
+        "hero_background": {
+          "url": "https://images.unsplash.com/photo-1764258560300-2346b28b4e7c",
+          "alt": "Abstract blue glowing digital network lines",
+          "usage": "Hero section background, subtle overlay"
+        },
+        "server_room": {
+          "url": "https://images.unsplash.com/photo-1645477704075-cb3d14b349ee",
+          "alt": "Futuristic server room with blue lights",
+          "usage": "Infrastructure monitoring section, demo mode background"
+        },
+        "ai_brain": {
+          "url": "https://images.unsplash.com/photo-1647356191320-d7a1f80ca777",
+          "alt": "Abstract purple and blue AI node graph",
+          "usage": "Root Cause Analysis visualization, AI insights header"
+        },
+        "avatars": [
+          "https://images.unsplash.com/photo-1627776880991-808c5996527b",
+          "https://images.unsplash.com/photo-1660074127797-1c429fbb8cd6",
+          "https://images.unsplash.com/photo-1615177393114-bd2917a4f74a"
+        ]
+      },
+      "icons": "lucide-react"
+    },
+    "accessibility": {
+      "contrast": "Ensure text meets WCAG AA (4.5:1). Use APCA for fine-tuning.",
+      "interactive": "All interactive elements must have visible focus states (ring-2 ring-primary).",
+      "reduced_motion": "Respect prefers-reduced-motion media query."
+    },
+    "universal_guidelines": [
+      "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+      "Don't make generic centered layouts. Create depth through layered design elements.",
+      "Use glass-morphism effects with backdrop filters (12-24px blur).",
+      "Every interaction needs micro-animations.",
+      "Use 2-3x more spacing than feels comfortable.",
+      "Subtle grain textures and noise overlays separate good from extraordinary.",
+      "All interactive elements MUST include data-testid attribute."
+    ],
+    "instructions_to_main_agent": [
+      "Install framer-motion: `yarn add framer-motion`.",
+      "Install clsx and tailwind-merge if not present (already in package.json).",
+      "Use the 'Electric Swiss' archetype: Deep black backgrounds, electric blue/purple accents, precision typography.",
+      "Implement the 'Bento Grid' layout for the dashboard.",
+      "Use the provided image URLs for specific sections.",
+      "Ensure all charts (Recharts) use the defined palette colors.",
+      "Create a 'Layout' component that handles the sidebar/header structure with glassmorphism."
+    ]
+  }
+}
