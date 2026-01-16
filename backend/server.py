@@ -379,7 +379,10 @@ async def get_anomalies(hours: int = 24, limit: int = 100):
 async def create_incident(incident: IncidentCreate):
     """Create a new incident"""
     try:
-        new_incident = Incident(**incident.model_dump())
+        # Add default status for new incidents
+        incident_data = incident.model_dump()
+        incident_data['status'] = 'open'
+        new_incident = Incident(**incident_data)
         incident_dict = new_incident.model_dump()
         incident_dict['created_at'] = incident_dict['created_at'].isoformat()
         await db.incidents.insert_one(incident_dict)
