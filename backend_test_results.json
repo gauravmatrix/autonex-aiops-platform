@@ -1,79 +1,104 @@
 {
-  "tests_run": 13,
-  "tests_passed": 12,
-  "success_rate": 92.3076923076923,
-  "failed_tests": [
-    {
-      "test": "Create Incident",
-      "details": "Status: 520, Data: {'detail': \"1 validation error for Incident\\nstatus\\n  Field required [type=missing, input_value={'title': 'Test Performan...way', 'anomaly_ids': []}, input_type=dict]\\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\"}"
-    }
-  ],
+  "tests_run": 19,
+  "tests_passed": 19,
+  "success_rate": 100.0,
+  "failed_tests": [],
   "overall_status": "EXCELLENT",
   "detailed_results": {
     "Health Check": {
       "success": true,
       "details": "",
-      "timestamp": "2026-01-16T15:31:55.810171"
+      "timestamp": "2026-01-16T15:32:39.787713"
     },
     "Root Endpoint": {
       "success": true,
       "details": "",
-      "timestamp": "2026-01-16T15:31:55.843911"
+      "timestamp": "2026-01-16T15:32:39.864449"
     },
     "Get Services List": {
       "success": true,
       "details": "Found 5 services",
-      "timestamp": "2026-01-16T15:31:55.882190"
+      "timestamp": "2026-01-16T15:32:39.945265"
     },
     "Get Latest Metrics": {
       "success": true,
       "details": "Retrieved 5 metrics",
-      "timestamp": "2026-01-16T15:31:55.921922"
+      "timestamp": "2026-01-16T15:32:39.981793"
     },
     "Get Timeseries Metrics": {
       "success": true,
       "details": "Retrieved timeseries for api-gateway",
-      "timestamp": "2026-01-16T15:31:55.993591"
+      "timestamp": "2026-01-16T15:32:40.018882"
     },
     "Get Anomalies": {
       "success": true,
       "details": "Found 0 existing anomalies",
-      "timestamp": "2026-01-16T15:31:56.035990"
+      "timestamp": "2026-01-16T15:32:40.056371"
     },
     "Run Anomaly Detection": {
       "success": true,
       "details": "Detected 0 new anomalies",
-      "timestamp": "2026-01-16T15:31:56.114695"
+      "timestamp": "2026-01-16T15:32:40.089441"
     },
     "Get Incidents": {
       "success": true,
       "details": "Found 0 existing incidents",
-      "timestamp": "2026-01-16T15:31:56.147896"
+      "timestamp": "2026-01-16T15:32:40.125858"
     },
     "Create Incident": {
-      "success": false,
-      "details": "Status: 520, Data: {'detail': \"1 validation error for Incident\\nstatus\\n  Field required [type=missing, input_value={'title': 'Test Performan...way', 'anomaly_ids': []}, input_type=dict]\\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\"}",
-      "timestamp": "2026-01-16T15:31:56.193925"
+      "success": true,
+      "details": "Created incident e94c42ea-c85a-42bc-b8b2-18713a2b860a",
+      "timestamp": "2026-01-16T15:32:40.173337"
+    },
+    "Get Specific Incident": {
+      "success": true,
+      "details": "",
+      "timestamp": "2026-01-16T15:32:40.206622"
+    },
+    "Update Incident": {
+      "success": true,
+      "details": "",
+      "timestamp": "2026-01-16T15:32:40.245701"
+    },
+    "AI Root Cause Analysis": {
+      "success": true,
+      "details": "Analysis completed",
+      "timestamp": "2026-01-16T15:32:54.711460"
+    },
+    "AI Recommendations": {
+      "success": true,
+      "details": "Generated 3 recommendations",
+      "timestamp": "2026-01-16T15:33:00.381838"
+    },
+    "Get Actions": {
+      "success": true,
+      "details": "Found 3 actions",
+      "timestamp": "2026-01-16T15:33:00.414420"
+    },
+    "Approve Action": {
+      "success": true,
+      "details": "",
+      "timestamp": "2026-01-16T15:33:00.447169"
     },
     "Get Demo Status": {
       "success": true,
       "details": "Failure mode: False",
-      "timestamp": "2026-01-16T15:31:56.272188"
+      "timestamp": "2026-01-16T15:33:00.477213"
     },
     "Inject Demo Failure": {
       "success": true,
       "details": "",
-      "timestamp": "2026-01-16T15:31:56.307437"
+      "timestamp": "2026-01-16T15:33:00.511499"
     },
     "Clear Demo Failure": {
       "success": true,
       "details": "",
-      "timestamp": "2026-01-16T15:31:58.341974"
+      "timestamp": "2026-01-16T15:33:02.561964"
     },
     "Dashboard Stats": {
       "success": true,
       "details": "Retrieved stats for 5 services",
-      "timestamp": "2026-01-16T15:31:58.420621"
+      "timestamp": "2026-01-16T15:33:02.602650"
     }
   }
 }
